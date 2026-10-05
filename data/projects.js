@@ -48,6 +48,18 @@ const projects = [
     order: 4
   },
   {
+    id: "ergonomic-posture-monitor",
+    title: "Ergonomic Posture Monitor",
+    description: {
+      en: "Real-time computer vision system for personalized posture monitoring, actionable feedback, and session analytics.",
+      tr: "Kişiselleştirilmiş duruş takibi, anlık geri bildirim ve oturum analitiği sunan gerçek zamanlı bilgisayarlı görü sistemi."
+    },
+    tags: ["Python", "MediaPipe", "OpenCV", "Computer Vision"],
+    repo: "ergonomic-posture-monitor",
+    featured: true,
+    order: 5
+  },
+  {
     id: "stroke-prediction",
     title: "Stroke Prediction",
     description: {
@@ -57,6 +69,6 @@ const projects = [
     tags: ["Python", "Scikit-learn", "Classification", "Data Analysis"],
     repo: "stroke-prediction",
     featured: false,
-    order: 5
+    order: 6
   }
 ];
