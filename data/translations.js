@@ -1,5 +1,14 @@
 const translations = {
   en: {
+    // Page Titles
+    page_title_home: "Arda Atik | Artificial Intelligence Engineer",
+    page_title_about: "About | Arda Atik",
+    page_title_experience: "Experience | Arda Atik",
+    page_title_projects: "Projects | Arda Atik",
+    page_title_skills: "Skills | Arda Atik",
+    page_title_contact: "Contact | Arda Atik",
+    page_title_project: "Project | Arda Atik",
+
     // Navigation
     nav_about: "About",
     nav_experience: "Experience",
@@ -14,7 +23,7 @@ const translations = {
     hero_desc: "I build practical machine learning, computer vision, and data systems focused on real-world problems.",
 
     explore: "Explore My Work",
-    who_am_i: "Who I Am",
+    who_am_i: "Who Am I?",
     github: "GitHub ↗",
 
     // Home - About
@@ -25,16 +34,22 @@ const translations = {
 
     // Home - Experience
     experience: "Experience",
-    experience_short: "Building data-analysis and AI systems in industry, backed by hands-on production-technology experience.",
+    experience_short: "Combining experience in industrial technologies with AI engineering to develop intelligent, data-driven solutions.",
     view_experience: "View experience →",
 
     // Home - Projects
     selected_work: "Selected Work",
     view_all: "View all projects →",
 
-    // Home - Skills
-    technologies: "Technologies",
+    // Home - Technical Expertise
+    technologies: "Technical Expertise",
     view_skills: "View all skills →",
+
+    expertise_ml: "Machine Learning & Deep Learning",
+    expertise_cv: "Computer Vision",
+    expertise_xai: "Explainable AI",
+    expertise_data: "Data Science & Analytics",
+    expertise_backend: "Backend & MLOps",
 
     // Home - Contact
     contact: "Contact",
@@ -68,14 +83,18 @@ const translations = {
 
     // Experience page
     experience_title: "Experience",
-    current: "2026 — Present",
-    internship: "10-Month Internship",
+    faydam_period: "2026 — Present",
+    sisecam_period: "2024 — 2025 · 10-Month Internship",
     eskisehir: "Eskişehir, Türkiye",
     turkey: "Türkiye",
-
+ 
+    faydam_company: "Faydam Innovation",
+    faydam_company_full: "Faydam Innovation A.Ş.",
     faydam_role: "Artificial Intelligence Engineer",
     faydam_desc: "Developing data-analysis and machine-learning systems for operational problems, including failure detection and predictive analysis across large telemetry and product datasets.",
 
+    sisecam_company: "Şişecam",
+    sisecam_company_full: "Türkiye Şişe ve Cam Fabrikaları A.Ş.",
     sisecam_role: "IT Production Technologies Intern",
     sisecam_desc: "Contributed to production-technology initiatives involving digital twins, RFID, data engineering, operational reporting, and manufacturing-focused analysis.",
 
@@ -106,6 +125,15 @@ const translations = {
   },
 
   tr: {
+    // Page Titles
+    page_title_home: "Arda Atik | Yapay Zeka Mühendisi",
+    page_title_about: "Hakkımda | Arda Atik",
+    page_title_experience: "Deneyim | Arda Atik",
+    page_title_projects: "Projeler | Arda Atik",
+    page_title_skills: "Yetenekler | Arda Atik",
+    page_title_contact: "İletişim | Arda Atik",
+    page_title_project: "Proje | Arda Atik",
+    
     // Navigation
     nav_about: "Hakkımda",
     nav_experience: "Deneyim",
@@ -131,16 +159,22 @@ const translations = {
 
     // Home - Experience
     experience: "Deneyim",
-    experience_short: "Üretim teknolojilerindeki uygulamalı deneyimimin üzerine endüstride veri analizi ve yapay zeka sistemleri geliştiriyorum.",
+    experience_short: "Endüstriyel teknolojilerdeki deneyimimi yapay zeka mühendisliğiyle birleştirerek akıllı ve veri odaklı çözümler geliştiriyorum.",
     view_experience: "Deneyimi görüntüle →",
 
     // Home - Projects
     selected_work: "Öne Çıkan Projeler",
     view_all: "Tüm projeleri görüntüle →",
 
-    // Home - Skills
-    technologies: "Teknolojiler",
+    // Home - Technical Expertise
+    technologies: "Teknik Uzmanlık Alanları",
     view_skills: "Tüm yetenekleri görüntüle →",
+
+    expertise_ml: "Makine Öğrenmesi ve Derin Öğrenme",
+    expertise_cv: "Bilgisayarlı Görü",
+    expertise_xai: "Açıklanabilir Yapay Zeka",
+    expertise_data: "Veri Bilimi ve Analitik",
+    expertise_backend: "Backend ve MLOps",
 
     // Home - Contact
     contact: "İletişim",
@@ -174,14 +208,18 @@ const translations = {
 
     // Experience page
     experience_title: "Deneyim",
-    current: "2026 — Günümüz",
-    internship: "10 Aylık Staj",
+    faydam_period: "2026 — Günümüz",
+    sisecam_period: "2024 — 2025 · 10 Aylık Staj",
     eskisehir: "Eskişehir, Türkiye",
     turkey: "Türkiye",
 
+    faydam_company: "Faydam İnovasyon",
+    faydam_company_full: "Faydam İnovasyon A.Ş.",
     faydam_role: "Yapay Zeka Mühendisi",
     faydam_desc: "Büyük telemetri ve ürün veri kümelerinde arıza tespiti ve öngörüsel analiz dahil olmak üzere operasyonel problemlere yönelik veri analizi ve makine öğrenmesi sistemleri geliştiriyorum.",
 
+    sisecam_company: "Şişecam",
+    sisecam_company_full: "Türkiye Şişe ve Cam Fabrikaları A.Ş.",
     sisecam_role: "IT Production Technologies Stajyeri",
     sisecam_desc: "Dijital ikiz, RFID, veri mühendisliği, operasyonel raporlama ve üretim odaklı analiz çalışmalarına katkı sağladım.",
 

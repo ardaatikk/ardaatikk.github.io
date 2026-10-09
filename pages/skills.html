@@ -1,14 +1,27 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>Arda Atik</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="../style.css">
 </head>
 
 <body data-root=".." data-page="skills">
 
+  <!-- Ambient Background -->
   <div class="ambient-background" aria-hidden="true">
     <div class="ambient ambient-one"></div>
     <div class="ambient ambient-two"></div>
@@ -16,43 +29,66 @@
     <div class="ambient ambient-four"></div>
   </div>
 
+  <!-- Header -->
   <header id="site-header"></header>
 
+  <!-- Main Content -->
   <main class="shell page">
 
-    <a class="back-link" href="../index.html" data-i18n="back_home"></a>
+    <!-- Back to Home -->
+    <a
+      class="back-link"
+      href="../index.html"
+      data-i18n="back_home"
+    ></a>
 
+    <!-- Page Heading -->
     <p class="eyebrow" data-i18n="technologies"></p>
 
-    <h1 class="page-title" data-i18n="skills_title"></h1>
+    <h1
+      class="page-title"
+      data-i18n="skills_title"
+    ></h1>
 
-    <p class="page-intro" data-i18n="skills_intro"></p>
+    <p
+      class="page-intro"
+      data-i18n="skills_intro"
+    ></p>
 
+    <!-- Skills Grid -->
     <div class="skills-grid">
 
       <!-- Programming -->
       <div class="skill-group">
+
         <h2 data-i18n="programming"></h2>
+
         <div class="skill-cloud">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">SQL</span>
         </div>
+
       </div>
 
       <!-- AI & Machine Learning -->
       <div class="skill-group">
+
         <h2 data-i18n="aiml"></h2>
+
         <div class="skill-cloud">
           <span class="tech-tag">PyTorch</span>
           <span class="tech-tag">Scikit-learn</span>
           <span class="tech-tag">Machine Learning</span>
           <span class="tech-tag">Deep Learning</span>
         </div>
+
       </div>
 
       <!-- Computer Vision -->
       <div class="skill-group">
+
         <h2 data-i18n="computer_vision"></h2>
+
         <div class="skill-cloud">
           <span class="tech-tag">OpenCV</span>
           <span class="tech-tag">MediaPipe</span>
@@ -60,21 +96,27 @@
           <span class="tech-tag">Object Detection</span>
           <span class="tech-tag">Object Tracking</span>
         </div>
+
       </div>
 
       <!-- Explainable AI -->
       <div class="skill-group">
+
         <h2 data-i18n="explainable_ai"></h2>
+
         <div class="skill-cloud">
           <span class="tech-tag">Grad-CAM</span>
           <span class="tech-tag">Integrated Gradients</span>
           <span class="tech-tag">Captum</span>
         </div>
+
       </div>
 
       <!-- Data & Model Evaluation -->
       <div class="skill-group">
+
         <h2 data-i18n="data_evaluation"></h2>
+
         <div class="skill-cloud">
           <span class="tech-tag">NumPy</span>
           <span class="tech-tag">Pandas</span>
@@ -86,46 +128,60 @@
           <span class="tech-tag">PR-AUC</span>
           <span class="tech-tag">Threshold Optimization</span>
         </div>
+
       </div>
 
       <!-- Backend & Deployment -->
       <div class="skill-group">
+
         <h2 data-i18n="backend"></h2>
+
         <div class="skill-cloud">
           <span class="tech-tag">FastAPI</span>
           <span class="tech-tag">Docker</span>
         </div>
+
       </div>
 
       <!-- Developer Tools -->
       <div class="skill-group">
+
         <h2 data-i18n="tools"></h2>
+
         <div class="skill-cloud">
           <span class="tech-tag">Git</span>
           <span class="tech-tag">GitHub</span>
           <span class="tech-tag">GitHub Actions</span>
           <span class="tech-tag">Pytest</span>
         </div>
+
       </div>
 
     </div>
 
+    <!-- Page End -->
     <div class="page-end">
+
       <a
         class="back-link"
         style="margin:0"
         href="../index.html"
         data-i18n="back_home"
       ></a>
+
       <span data-i18n="page_end"></span>
+
     </div>
 
   </main>
 
+  <!-- Footer -->
   <footer id="site-footer"></footer>
 
+  <!-- Back to Top -->
   <button id="back-to-top"></button>
 
+  <!-- Scripts -->
   <script src="../data/projects.js"></script>
   <script src="../data/translations.js"></script>
   <script src="../script.js"></script>

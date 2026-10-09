@@ -1,13 +1,157 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arda Atik</title><link rel="stylesheet" href="../style.css"></head><body data-root=".." data-page="projects"><div class="ambient-background" aria-hidden="true"><div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="ambient ambient-three"></div><div class="ambient ambient-four"></div></div><header id="site-header"></header><main class="shell page"><a class="back-link" href="../index.html" data-i18n="back_home"></a><p class="eyebrow" data-i18n="projects_label"></p><h1 class="page-title" data-i18n="projects_title"></h1><p class="page-intro" data-i18n="projects_intro"></p>
-<div class="projects-toolbar" aria-label="Project view">
-  <span class="projects-toolbar-label" data-i18n="view_as"></span>
-  <div class="view-toggle" role="group" aria-label="Project view">
-    <button class="view-toggle-button active" type="button" data-project-view="grid" data-i18n-aria="grid_view" aria-label="Grid view" title="Grid view">
-      <span aria-hidden="true" class="grid-icon"><i></i><i></i><i></i><i></i></span>
-    </button>
-    <button class="view-toggle-button" type="button" data-project-view="list" data-i18n-aria="list_view" aria-label="List view" title="List view">
-      <span aria-hidden="true" class="list-icon"><i></i><i></i><i></i></span>
-    </button>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Arda Atik</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body data-root=".." data-page="projects">
+
+  <!-- Ambient Background -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+    <div class="ambient ambient-four"></div>
   </div>
-</div>
-<div id="all-projects" class="project-grid" data-view="grid"></div><div class="page-end"><a class="back-link" style="margin:0" href="../index.html" data-i18n="back_home"></a><span data-i18n="page_end"></span></div></main><footer id="site-footer"></footer><button id="back-to-top"></button><script src="../data/projects.js"></script><script src="../data/translations.js"></script><script src="../script.js"></script></body></html>
+
+  <!-- Header -->
+  <header id="site-header"></header>
+
+  <!-- Main Content -->
+  <main class="shell page">
+
+    <!-- Back to Home -->
+    <a
+      class="back-link"
+      href="../index.html"
+      data-i18n="back_home"
+    ></a>
+
+    <!-- Page Heading -->
+    <p
+      class="eyebrow"
+      data-i18n="projects_label"
+    ></p>
+
+    <h1
+      class="page-title"
+      data-i18n="projects_title"
+    ></h1>
+
+    <p
+      class="page-intro"
+      data-i18n="projects_intro"
+    ></p>
+
+    <!-- Projects Toolbar -->
+    <div
+      class="projects-toolbar"
+      aria-label="Project view"
+    >
+
+      <span
+        class="projects-toolbar-label"
+        data-i18n="view_as"
+      ></span>
+
+      <!-- Grid / List Toggle -->
+      <div
+        class="view-toggle"
+        role="group"
+        aria-label="Project view"
+      >
+
+        <!-- Grid View -->
+        <button
+          class="view-toggle-button active"
+          type="button"
+          data-project-view="grid"
+          data-i18n-aria="grid_view"
+          aria-label="Grid view"
+          title="Grid view"
+        >
+          <span
+            aria-hidden="true"
+            class="grid-icon"
+          >
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </button>
+
+        <!-- List View -->
+        <button
+          class="view-toggle-button"
+          type="button"
+          data-project-view="list"
+          data-i18n-aria="list_view"
+          aria-label="List view"
+          title="List view"
+        >
+          <span
+            aria-hidden="true"
+            class="list-icon"
+          >
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Dynamic Projects Container -->
+    <div
+      id="all-projects"
+      class="project-grid"
+      data-view="grid"
+    ></div>
+
+    <!-- Page End -->
+    <div class="page-end">
+
+      <a
+        class="back-link"
+        style="margin:0"
+        href="../index.html"
+        data-i18n="back_home"
+      ></a>
+
+      <span data-i18n="page_end"></span>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="site-footer"></footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top"></button>
+
+  <!-- Scripts -->
+  <script src="../data/projects.js"></script>
+  <script src="../data/translations.js"></script>
+  <script src="../script.js"></script>
+
+</body>
+</html>

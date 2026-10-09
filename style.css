@@ -1002,3 +1002,160 @@ body[data-page="home"] .project-card .tags {
         transform: none !important;
     }
 }
+
+/* =========================================================
+   HOME — TECHNICAL EXPERTISE
+   ========================================================= */
+
+body[data-page="home"] .expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 32px;
+}
+
+body[data-page="home"] .expertise-card {
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid #222;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.018);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+body[data-page="home"] .expertise-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 72, 77, 0.42);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.2);
+}
+
+body[data-page="home"] .expertise-card h3 {
+  color: #f0f0f0;
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+body[data-page="home"] .expertise-card .skill-cloud {
+  gap: 8px;
+  margin-top: auto;
+}
+
+body[data-page="home"] .expertise-card .tech-tag {
+  font-size: 11px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  body[data-page="home"] .expertise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body[data-page="home"] .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  body[data-page="home"] .expertise-card {
+    padding: 22px;
+    gap: 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="home"] .expertise-card {
+    transition: none;
+  }
+
+  body[data-page="home"] .expertise-card:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   HOME — EXPERIENCE REDESIGN
+   ========================================================= */
+
+/* Balanced section spacing */
+body[data-page="home"] .home-about,
+body[data-page="home"] .home-experience {
+  padding-top: 54px !important;
+  padding-bottom: 54px !important;
+}
+
+/* Experience Timeline */
+.home-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 30px;
+  margin-left: 5px;
+  padding-left: 25px;
+  border-left: 1px solid #333;
+}
+
+.home-timeline-item {
+  position: relative;
+}
+
+.home-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #e5484d;
+  box-shadow: 0 0 14px rgba(229, 72, 77, 0.25);
+}
+
+.home-timeline-date {
+  display: block;
+  margin-bottom: 6px;
+  color: #888;
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.home-timeline-content h3 {
+  color: #f0f0f0;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.home-timeline-content p {
+  margin-top: 3px;
+  color: #888;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+
+  body[data-page="home"] .home-about,
+  body[data-page="home"] .home-experience {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .home-timeline {
+    margin-top: 26px;
+  }
+}

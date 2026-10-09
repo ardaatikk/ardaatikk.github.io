@@ -50,8 +50,33 @@ function renderFooter() {
     </footer>`;
 }
 
+function updatePageTitle() {
+  const page = document.body.dataset.page || "home";
+
+  const titleKeys = {
+    home: "page_title_home",
+    about: "page_title_about",
+    experience: "page_title_experience",
+    projects: "page_title_projects",
+    skills: "page_title_skills",
+    contact: "page_title_contact",
+    project: "page_title_project"
+  };
+
+  // Project detail pages set their own title using the project name.
+  if (page === "project") return;
+
+  const key = titleKeys[page];
+
+  if (key) {
+    document.title = t(key);
+  }
+}
+
 function applyTranslations() {
   document.documentElement.lang = currentLanguage;
+
+  updatePageTitle();
   document.querySelectorAll("[data-i18n]").forEach(el => {
     el.textContent = t(el.dataset.i18n);
   });
