@@ -1159,3 +1159,274 @@ body[data-page="home"] .home-experience {
     margin-top: 26px;
   }
 }
+
+/* =========================================================
+   EXPERIENCE PAGE — PROFESSIONAL JOURNEY TIMELINE
+   ========================================================= */
+
+body[data-page="experience"] .page-intro {
+  max-width: 720px;
+  margin-top: 24px;
+  color: #999;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Section Layout */
+
+body[data-page="experience"] .journey-section {
+  margin-top: 75px;
+}
+
+body[data-page="experience"] .journey-section-title {
+  margin-bottom: 36px;
+  color: #f0f0f0;
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 550;
+  letter-spacing: -0.035em;
+}
+
+/* Timeline Container */
+
+body[data-page="experience"] .journey-timeline {
+  position: relative;
+  margin-left: 7px;
+  padding-left: 40px;
+  border-left: 1px solid #343434;
+}
+
+/* Timeline Items */
+
+body[data-page="experience"] .journey-item {
+  position: relative;
+  padding-bottom: 36px;
+}
+
+body[data-page="experience"] .journey-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline Marker */
+
+body[data-page="experience"] .journey-marker {
+  position: absolute;
+  top: 31px;
+  left: -48px;
+
+  width: 15px;
+  height: 15px;
+
+  border: 3px solid #080808;
+  border-radius: 50%;
+
+  background: #e5484d;
+
+  box-shadow:
+    0 0 0 1px rgba(229, 72, 77, 0.45),
+    0 0 18px rgba(229, 72, 77, 0.22);
+
+  z-index: 2;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+body[data-page="experience"] .journey-item:hover .journey-marker {
+  transform: scale(1.18);
+
+  box-shadow:
+    0 0 0 1px rgba(229, 72, 77, 0.65),
+    0 0 24px rgba(229, 72, 77, 0.35);
+}
+
+/* Content Cards */
+
+body[data-page="experience"] .journey-content {
+  position: relative;
+
+  padding: 30px 34px;
+
+  border: 1px solid #252525;
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+body[data-page="experience"] .journey-item:hover .journey-content {
+  transform: translateY(-3px);
+
+  border-color: rgba(229, 72, 77, 0.38);
+
+  background: rgba(255, 255, 255, 0.028);
+
+  box-shadow:
+    0 16px 45px rgba(0, 0, 0, 0.16);
+}
+
+/* Date & Location */
+
+body[data-page="experience"] .journey-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+
+  margin-bottom: 15px;
+
+  color: #888;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+
+  font-size: 11px;
+}
+
+/* Job / Degree Title */
+
+body[data-page="experience"] .journey-content h3 {
+  color: #f1f1f1;
+
+  font-size: clamp(19px, 2vw, 25px);
+  font-weight: 550;
+
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+}
+
+/* Company / University */
+
+body[data-page="experience"] .journey-content .company {
+  margin-top: 7px;
+
+  color: #e5484d;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Description */
+
+body[data-page="experience"] .journey-description {
+  max-width: 850px;
+
+  margin-top: 20px;
+
+  color: #999;
+
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* Technology Tags */
+
+body[data-page="experience"] .journey-content .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 24px;
+}
+
+/* Education Section */
+
+body[data-page="experience"] .journey-education {
+  margin-top: 85px;
+  padding-top: 48px;
+
+  border-top: 1px solid #222;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  body[data-page="experience"] .journey-timeline {
+    padding-left: 32px;
+  }
+
+  body[data-page="experience"] .journey-marker {
+    left: -40px;
+  }
+
+  body[data-page="experience"] .journey-content {
+    padding: 27px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  body[data-page="experience"] .journey-section {
+    margin-top: 55px;
+  }
+
+  body[data-page="experience"] .journey-section-title {
+    margin-bottom: 27px;
+    font-size: 23px;
+  }
+
+  body[data-page="experience"] .journey-timeline {
+    margin-left: 5px;
+    padding-left: 23px;
+  }
+
+  body[data-page="experience"] .journey-item {
+    padding-bottom: 22px;
+  }
+
+  body[data-page="experience"] .journey-marker {
+    top: 24px;
+    left: -31px;
+
+    width: 13px;
+    height: 13px;
+  }
+
+  body[data-page="experience"] .journey-content {
+    padding: 22px 20px;
+    border-radius: 12px;
+  }
+
+  body[data-page="experience"] .journey-content h3 {
+    font-size: 19px;
+  }
+
+  body[data-page="experience"] .journey-description {
+    margin-top: 16px;
+    font-size: 13px;
+  }
+
+  body[data-page="experience"] .journey-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  body[data-page="experience"] .journey-education {
+    margin-top: 60px;
+    padding-top: 36px;
+  }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="experience"] .journey-content,
+  body[data-page="experience"] .journey-marker {
+    transition: none;
+  }
+
+  body[data-page="experience"] .journey-item:hover .journey-content,
+  body[data-page="experience"] .journey-item:hover .journey-marker {
+    transform: none;
+  }
+}

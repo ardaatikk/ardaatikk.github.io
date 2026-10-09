@@ -15,7 +15,6 @@
   <link rel="manifest" href="../assets/site.webmanifest">
   <meta name="theme-color" content="#000000">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -32,17 +31,14 @@
   <!-- Header -->
   <header id="site-header"></header>
 
-  <!-- Main Content -->
   <main class="shell page">
 
-    <!-- Back to Home -->
     <a
       class="back-link"
       href="../index.html"
       data-i18n="back_home"
     ></a>
 
-    <!-- Page Heading -->
     <p class="eyebrow" data-i18n="experience"></p>
 
     <h1
@@ -50,71 +46,145 @@
       data-i18n="experience_title"
     ></h1>
 
-    <!-- Experience List -->
-    <div class="experience-list">
+    <p
+      class="page-intro"
+      data-i18n="journey_intro"
+    ></p>
 
-      <!-- Faydam Innovation -->
-      <article class="experience-item">
+    <!-- Professional Experience -->
+    <section class="journey-section">
 
-        <div class="experience-meta">
-          <span data-i18n="faydam_period"></span>
-          <span data-i18n="eskisehir"></span>
-        </div>
+      <h2
+        class="journey-section-title"
+        data-i18n="professional_experience"
+      ></h2>
 
-        <div class="experience-content">
+      <div class="journey-timeline">
 
-          <h2 data-i18n="faydam_role"></h2>
+        <!-- Faydam Innovation -->
+        <article class="journey-item">
 
-          <p
-            class="company"
-            data-i18n="faydam_company_full"
-          ></p>
+          <div class="journey-marker" aria-hidden="true"></div>
 
-          <p data-i18n="faydam_desc"></p>
+          <div class="journey-content">
 
-          <div class="tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">YOLO</span>
-            <span class="tech-tag">SciPy</span>
+            <div class="journey-meta">
+              <span data-i18n="faydam_period"></span>
+              <span data-i18n="eskisehir"></span>
+            </div>
+
+            <h3 data-i18n="faydam_role"></h3>
+
+            <p
+              class="company"
+              data-i18n="faydam_company_full"
+            ></p>
+
+            <p
+              class="journey-description"
+              data-i18n="faydam_desc"
+            ></p>
+
+            <div class="tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">YOLO</span>
+              <span class="tech-tag">SciPy</span>
+            </div>
+
           </div>
 
-        </div>
+        </article>
 
-      </article>
+        <!-- Sisecam -->
+        <article class="journey-item">
 
-      <!-- Sisecam -->
-      <article class="experience-item">
+          <div class="journey-marker" aria-hidden="true"></div>
 
-        <div class="experience-meta">
-          <span data-i18n="sisecam_period"></span>
-          <span data-i18n="turkey"></span>
-        </div>
+          <div class="journey-content">
 
-        <div class="experience-content">
+            <div class="journey-meta">
+              <span data-i18n="sisecam_period"></span>
+              <span data-i18n="turkey"></span>
+            </div>
 
-          <h2 data-i18n="sisecam_role"></h2>
+            <h3 data-i18n="sisecam_role"></h3>
 
-          <p
-            class="company"
-            data-i18n="sisecam_company_full"
-          ></p>
+            <p
+              class="company"
+              data-i18n="sisecam_company_full"
+            ></p>
 
-          <p data-i18n="sisecam_desc"></p>
+            <p
+              class="journey-description"
+              data-i18n="sisecam_desc"
+            ></p>
 
-          <div class="tags">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">Power Query</span>
-            <span class="tech-tag">Excel</span>
+            <div class="tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Power Query</span>
+              <span class="tech-tag">Excel</span>
+            </div>
+
           </div>
 
-        </div>
+        </article>
 
-      </article>
+      </div>
 
-    </div>
+    </section>
+
+    <!-- Education -->
+    <section class="journey-section journey-education">
+
+      <h2
+        class="journey-section-title"
+        data-i18n="education"
+      ></h2>
+
+      <div class="journey-timeline">
+
+        <!-- Bahcesehir University -->
+        <article class="journey-item">
+
+          <div class="journey-marker" aria-hidden="true"></div>
+
+          <div class="journey-content">
+
+            <div class="journey-meta">
+              <span data-i18n="education_period"></span>
+              <span data-i18n="istanbul"></span>
+            </div>
+
+            <h3 data-i18n="education_degree"></h3>
+
+            <p
+              class="company"
+              data-i18n="education_university"
+            ></p>
+
+            <p
+              class="journey-description"
+              data-i18n="education_desc"
+            ></p>
+
+            <div class="tags">
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Deep Learning</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">Artificial Intelligence</span>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
 
     <!-- Page End -->
     <div class="page-end">

@@ -87,7 +87,7 @@ const translations = {
     sisecam_period: "2024 — 2025 · 10-Month Internship",
     eskisehir: "Eskişehir, Türkiye",
     turkey: "Türkiye",
- 
+
     faydam_company: "Faydam Innovation",
     faydam_company_full: "Faydam Innovation A.Ş.",
     faydam_role: "Artificial Intelligence Engineer",
@@ -97,6 +97,16 @@ const translations = {
     sisecam_company_full: "Türkiye Şişe ve Cam Fabrikaları A.Ş.",
     sisecam_role: "IT Production Technologies Intern",
     sisecam_desc: "Contributed to production-technology initiatives involving digital twins, RFID, data engineering, operational reporting, and manufacturing-focused analysis.",
+
+    // Journey Timeline
+    journey_intro: "A timeline of my professional experience and academic background in artificial intelligence and technology.",
+    professional_experience: "Professional Experience",
+    education: "Education",
+    education_period: "2021 — 2025",
+    istanbul: "Istanbul, Türkiye",
+    education_degree: "B.Sc. in Artificial Intelligence Engineering",
+    education_university: "Bahçeşehir University",
+    education_desc: "Completed my bachelor's degree in Artificial Intelligence Engineering, building a foundation in machine learning, deep learning, computer vision, and software development.",
 
     // Skills page
     skills_title: "Skills",
@@ -133,7 +143,7 @@ const translations = {
     page_title_skills: "Yetenekler | Arda Atik",
     page_title_contact: "İletişim | Arda Atik",
     page_title_project: "Proje | Arda Atik",
-    
+
     // Navigation
     nav_about: "Hakkımda",
     nav_experience: "Deneyim",
@@ -222,6 +232,16 @@ const translations = {
     sisecam_company_full: "Türkiye Şişe ve Cam Fabrikaları A.Ş.",
     sisecam_role: "IT Production Technologies Stajyeri",
     sisecam_desc: "Dijital ikiz, RFID, veri mühendisliği, operasyonel raporlama ve üretim odaklı analiz çalışmalarına katkı sağladım.",
+
+    // Journey Timeline
+    journey_intro: "Yapay zeka ve teknoloji alanındaki profesyonel deneyimlerimin ve akademik geçmişimin zaman çizelgesi.",
+    professional_experience: "Profesyonel Deneyim",
+    education: "Eğitim",
+    education_period: "2021 — 2025",
+    istanbul: "İstanbul, Türkiye",
+    education_degree: "Yapay Zeka Mühendisliği (Lisans)",
+    education_university: "Bahçeşehir Üniversitesi",
+    education_desc: "Yapay Zeka Mühendisliği lisans eğitimimi tamamlayarak makine öğrenmesi, derin öğrenme, bilgisayarlı görü ve yazılım geliştirme alanlarında temel oluşturdum.",
 
     // Skills page
     skills_title: "Yetenekler",
