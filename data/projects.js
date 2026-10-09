@@ -3,10 +3,18 @@ const projects = [
     id: "histopathology-cancer-detection",
     title: "Histopathology Cancer Detection",
     description: {
-      en: "Deep learning system for detecting metastatic regions in lymph node histopathology images with explainable AI.",
-      tr: "Lenf nodu histopatoloji görüntülerinde metastatik bölgeleri açıklanabilir yapay zeka ile tespit eden derin öğrenme sistemi."
+      en: "Breast cancer metastasis detection using ResNet-18, slide-independent 5-fold cross-validation (94.57% accuracy), and explainable AI with Grad-CAM and Integrated Gradients.",
+      tr: "ResNet-18, slayt bağımsız 5 katlı çapraz doğrulama (%94,57 doğruluk), Grad-CAM ve Integrated Gradients ile açıklanabilir meme kanseri metastaz tespiti."
     },
-    tags: ["Python", "PyTorch", "ResNet-18", "Computer Vision", "Grad-CAM"],
+    tags: [
+      "Python",
+      "PyTorch",
+      "ResNet-18",
+      "Computer Vision",
+      "Grad-CAM",
+      "Integrated Gradients",
+      "Cross-Validation"
+    ],
     repo: "histopathology-cancer-detection",
     featured: true,
     order: 1
