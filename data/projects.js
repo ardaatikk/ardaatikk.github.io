@@ -20,6 +20,18 @@ const projects = [
     order: 1
   },
   {
+    id: "human-action-recognition",
+    title: "Human Action Recognition",
+    description: {
+      en: "Deep learning pipeline for human action recognition using CNN-LSTM and pose-based models, featuring ablation studies, temporal analysis, and multi-seed experiments.",
+      tr: "CNN-LSTM ve poz tabanlı modellerle insan hareketi tanıma; ablation çalışmaları, zamansal analiz ve çoklu seed deneyleri içeren derin öğrenme projesi."
+    },
+    tags: ["Python", "PyTorch", "MediaPipe", "Computer Vision", "Deep Learning", "LSTM"],
+    repo: "human-action-recognition",
+    featured: true,
+    order: 2
+  },
+  {
     id: "ai4i-machine-failure-prediction",
     title: "AI4I Machine Failure Prediction",
     description: {
@@ -28,8 +40,8 @@ const projects = [
     },
     tags: ["Python", "Pandas", "Scikit-learn", "Machine Learning"],
     repo: "ai4i-machine-failure-prediction",
-    featured: true,
-    order: 2
+    featured: false,
+    order: 3
   },
   {
     id: "fraud-detection-ml-api",
@@ -41,7 +53,7 @@ const projects = [
     tags: ["Python", "Machine Learning", "FastAPI", "Docker", "API"],
     repo: "fraud-detection-ml-api",
     featured: true,
-    order: 3
+    order: 4
   },
   {
     id: "glass-bottle-inspection",
@@ -52,8 +64,8 @@ const projects = [
     },
     tags: ["Python", "Computer Vision", "Data Analysis"],
     repo: "glass-bottle-inspection",
-    featured: true,
-    order: 4
+    featured: false,
+    order: 5
   },
   {
     id: "ergonomic-posture-monitor",
@@ -65,7 +77,7 @@ const projects = [
     tags: ["Python", "MediaPipe", "OpenCV", "Computer Vision"],
     repo: "ergonomic-posture-monitor",
     featured: true,
-    order: 5
+    order: 6
   },
   {
     id: "stroke-prediction",
@@ -77,6 +89,6 @@ const projects = [
     tags: ["Python", "Scikit-learn", "Classification", "Data Analysis"],
     repo: "stroke-prediction",
     featured: false,
-    order: 6
+    order: 7
   }
 ];
