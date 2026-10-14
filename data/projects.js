@@ -90,5 +90,17 @@ const projects = [
     repo: "stroke-prediction",
     featured: false,
     order: 7
-  }
+  },
+  {
+    id: "retail-customer-tracking",
+    title: "Retail Customer Tracking",
+    description: {
+      en: "Single-camera person tracking and behavior analytics with YOLO11 and ByteTrack, featuring live RTSP capture, recorded-video replay, confirmed track exports, and zone-based analytics.",
+      tr: "YOLO11 ve ByteTrack ile tek kamera üzerinden kişi takibi ve davranış analizi; canlı RTSP akışı, kayıtlı videodan tekrar test, onaylı takip kayıtları ve bölge bazlı analiz."
+    },
+    tags: ["Python", "YOLO11", "ByteTrack", "OpenCV", "RTSP", "Computer Vision"],
+    repo: "retail-customer-tracking",
+    featured: false,
+    order: 8
+  },
 ];
