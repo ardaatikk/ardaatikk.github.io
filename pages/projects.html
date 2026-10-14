@@ -61,8 +61,32 @@
     <!-- Projects Toolbar -->
     <div
       class="projects-toolbar"
-      aria-label="Project view"
     >
+
+      <div class="project-search-controls">
+        <div class="project-search">
+          <span aria-hidden="true" class="search-icon">⌕</span>
+          <input id="project-search" type="search" data-i18n-aria="search_projects"
+            data-i18n-placeholder="search_projects" aria-controls="all-projects" autocomplete="off">
+          <button id="clear-project-search" type="button" data-i18n-aria="clear_search" hidden>×</button>
+        </div>
+        <div class="project-filter">
+          <button id="project-filter-toggle" class="project-filter-toggle" type="button"
+            aria-expanded="false" aria-controls="project-filter-panel">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+            <span data-i18n="filter_projects"></span>
+            <span id="project-filter-count" hidden></span>
+          </button>
+          <div id="project-filter-panel" class="project-filter-panel" hidden>
+            <fieldset>
+              <legend data-i18n="filter_tags"></legend>
+              <p class="project-filter-hint" data-i18n="filter_hint"></p>
+              <div id="project-filter-tags" class="project-filter-tags"></div>
+            </fieldset>
+            <button id="clear-project-filters" type="button" data-i18n="clear_filters" disabled></button>
+          </div>
+        </div>
+      </div>
 
       <span
         class="projects-toolbar-label"
@@ -73,6 +97,7 @@
       <div
         class="view-toggle"
         role="group"
+        data-i18n-aria="project_view"
         aria-label="Project view"
       >
 
@@ -118,6 +143,9 @@
       </div>
 
     </div>
+
+    <p id="project-results" class="project-results" role="status" aria-live="polite" aria-atomic="true"></p>
+    <p id="project-empty" class="project-empty" data-i18n="no_projects" hidden></p>
 
     <!-- Dynamic Projects Container -->
     <div

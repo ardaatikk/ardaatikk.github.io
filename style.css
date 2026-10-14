@@ -1430,3 +1430,62 @@ body[data-page="experience"] .journey-education {
     transform: none;
   }
 }
+/* Projects search and tag filters */
+body[data-page="projects"] .projects-toolbar {
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+.project-search-controls { display: flex; gap: 10px; margin-right: auto; min-width: 0; }
+.project-search {
+  display: flex; align-items: center; gap: 8px;
+  width: 340px; max-width: 100%; height: 42px; padding: 0 12px;
+  background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  transition: border-color .2s, box-shadow .2s;
+}
+.project-search:focus-within { border-color: rgba(229,72,77,.65); box-shadow: 0 0 20px rgba(229,72,77,.12); }
+.search-icon { color: #aaa; font-size: 24px; }
+.project-search input { width: 100%; min-width: 0; border: 0; outline: none; background: transparent; color: #f5f5f5; font: inherit; font-size: 13px; }
+.project-search input::placeholder { color: #999; }
+.project-search input::-webkit-search-cancel-button { -webkit-appearance: none; }
+.project-search button { border: 0; background: transparent; color: #bbb; font-size: 22px; min-width: 28px; height: 32px; cursor: pointer; }
+.project-filter { position: relative; }
+.project-filter-toggle {
+  display: flex; align-items: center; gap: 7px; height: 42px; padding: 0 12px;
+  border-radius: 14px; border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.035); color: #bbb; font-size: 12px; cursor: pointer;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.project-filter-toggle:hover, .project-filter-toggle[aria-expanded="true"] { border-color: rgba(229,72,77,.55); color: #f5f5f5; }
+#project-filter-count { color: #f7a2a5; }
+.project-filter-panel {
+  position: absolute; top: calc(100% + 10px); left: 0; z-index: 10;
+  width: 350px; max-width: 90vw; padding: 18px;
+  border: 1px solid rgba(255,255,255,.14); border-radius: 14px;
+  background: rgba(18,18,18,.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 16px 45px rgba(0,0,0,.35); animation: projectFilterIn .18s ease;
+}
+.project-filter-panel fieldset { border: 0; min-width: 0; }
+.project-filter-panel legend { color: #eee; font-size: 13px; }
+.project-filter-hint { margin: 4px 0 12px; color: #aaa; font-size: 11px; }
+.project-filter-tags { display: flex; flex-wrap: wrap; gap: 7px; max-height: 260px; overflow-y: auto; padding: 3px; }
+.project-filter-tags label { cursor: pointer; position: relative; }
+.project-filter-tags input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.project-filter-tags span { display: inline-flex; padding: 6px 10px; border: 1px solid #383838; border-radius: 999px; color: #bbb; font-size: 11px; }
+.project-filter-tags input:checked + span { color: #ffb5b8; border-color: rgba(229,72,77,.65); background: rgba(229,72,77,.13); }
+#clear-project-filters { margin-top: 14px; background: transparent; border: 0; color: #ddd; font-size: 12px; padding: 6px; cursor: pointer; }
+#clear-project-filters:disabled { color: #777; cursor: default; }
+.project-search button:focus-visible, .project-filter button:focus-visible,
+.project-filter-tags input:focus-visible + span { outline: 2px solid #e87579; outline-offset: 3px; }
+.project-results { margin-top: 12px; color: #aaa; font-size: 12px; }
+body[data-page="projects"] #all-projects { margin-top: 18px; }
+.project-empty { margin-top: 24px; padding: 28px; border: 1px solid #282828; border-radius: 14px; color: #bbb; }
+.project-search-controls [hidden], .project-empty[hidden] { display: none; }
+@keyframes projectFilterIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: none; } }
+@media (max-width: 650px) {
+  body[data-page="projects"] .projects-toolbar { flex-wrap: wrap; }
+  .project-search-controls { width: 100%; margin-right: 0; }
+  .project-search { flex: 1; width: auto; }
+  .project-filter-panel { left: auto; right: 0; }
+  body[data-page="projects"] .projects-toolbar-label { margin-left: auto; }
+}

@@ -85,6 +85,9 @@ function applyTranslations() {
     el.setAttribute("aria-label", label);
     el.title = label;
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    el.placeholder = t(el.dataset.i18nPlaceholder);
+  });
   const toggle = document.querySelector(".language-toggle");
   if (toggle) {
     toggle.dataset.lang = currentLanguage;
@@ -163,12 +166,105 @@ function projectCard(project) {
       </div>
     </article>`;
 }
+const projectFilters = { query: "", tags: new Set() };
+
+function normalizeProjectSearch(value) {
+  return value.toLocaleLowerCase("tr").normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "").replace(/ı/g, "i");
+}
+
+function matchesProjectFilters(project) {
+  const query = normalizeProjectSearch(projectFilters.query.trim());
+  const text = normalizeProjectSearch([
+    project.title, ...Object.values(project.description), ...project.tags
+  ].join(" "));
+  return text.includes(query) && (!projectFilters.tags.size ||
+    project.tags.some(tag => projectFilters.tags.has(tag)));
+}
+
+function initProjectFilters() {
+  const search = document.getElementById("project-search");
+  if (!search) return;
+  const clearSearch = document.getElementById("clear-project-search");
+  const toggle = document.getElementById("project-filter-toggle");
+  const panel = document.getElementById("project-filter-panel");
+  const tagHost = document.getElementById("project-filter-tags");
+  const tags = [...new Set(projects.flatMap(project => project.tags))].sort();
+  // Create text nodes rather than treating project tags as HTML.
+  tags.forEach(tag => {
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.value = tag;
+    input.setAttribute("aria-controls", "all-projects");
+    const text = document.createElement("span");
+    text.textContent = tag;
+    label.append(input, text);
+    tagHost.append(label);
+  });
+  const setOpen = open => {
+    panel.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+  };
+  search.addEventListener("input", () => {
+    projectFilters.query = search.value;
+    renderProjects();
+  });
+  clearSearch.addEventListener("click", () => {
+    search.value = projectFilters.query = "";
+    renderProjects();
+    search.focus();
+  });
+  toggle.addEventListener("click", () => setOpen(panel.hidden));
+  tagHost.addEventListener("change", event => {
+    const input = event.target;
+    if (input.checked) projectFilters.tags.add(input.value);
+    else projectFilters.tags.delete(input.value);
+    renderProjects();
+  });
+  document.getElementById("clear-project-filters").addEventListener("click", () => {
+    projectFilters.tags.clear();
+    tagHost.querySelectorAll("input").forEach(input => { input.checked = false; });
+    renderProjects();
+  });
+  document.addEventListener("click", event => {
+    if (!event.target.closest(".project-filter")) setOpen(false);
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !panel.hidden) {
+      const focusInside = panel.contains(document.activeElement);
+      setOpen(false);
+      if (focusInside) toggle.focus();
+    }
+  });
+  document.addEventListener("focusin", event => {
+    if (!event.target.closest(".project-filter")) setOpen(false);
+  });
+}
+
 function renderProjects() {
   const sorted = [...projects].sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
   const featured = document.getElementById("featured-projects");
   const all = document.getElementById("all-projects");
   if (featured) featured.innerHTML = sorted.filter(p => p.featured).map(projectCard).join("");
-  if (all) all.innerHTML = sorted.map(projectCard).join("");
+  if (all) {
+    const filtered = sorted.filter(matchesProjectFilters);
+    all.innerHTML = filtered.map(projectCard).join("");
+    const results = document.getElementById("project-results");
+    if (results) results.textContent = t("project_results")
+      .replace("{count}", filtered.length).replace("{total}", sorted.length);
+    const empty = document.getElementById("project-empty");
+    if (empty) empty.hidden = filtered.length > 0;
+    const clearSearch = document.getElementById("clear-project-search");
+    if (clearSearch) clearSearch.hidden = !projectFilters.query;
+    const count = document.getElementById("project-filter-count");
+    if (count) {
+      count.hidden = !projectFilters.tags.size;
+      count.textContent = projectFilters.tags.size;
+    }
+    const clearFilters = document.getElementById("clear-project-filters");
+    if (clearFilters) clearFilters.disabled = !projectFilters.tags.size;
+  }
 }
 
 function initProjectCards() {
@@ -579,6 +675,7 @@ function init() {
   renderBackToTop();
   initLanguageToggle();
   initProjectViewToggle();
+  initProjectFilters();
   initProjectCards();
   initProjectTilt();
   renderProjects();

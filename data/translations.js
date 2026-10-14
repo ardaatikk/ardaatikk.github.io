@@ -68,6 +68,16 @@ const translations = {
     view_as: "View",
     grid_view: "Grid view",
     list_view: "List view",
+    search_projects: "Search projects…",
+    clear_search: "Clear search",
+    filter_projects: "Filter",
+    filter_tags: "Filter by tags",
+    filter_hint: "Match any selected tag.",
+    clear_filters: "Clear filters",
+    no_projects: "No projects found. Try another search or clear your filters.",
+    project_results: "{count} of {total} projects",
+    project_view: "Project view",
+
 
     // Project details
     project_label: "PROJECT",
@@ -203,6 +213,16 @@ const translations = {
     view_as: "Görünüm",
     grid_view: "Izgara görünümü",
     list_view: "Liste görünümü",
+    search_projects: "Proje ara…",
+    clear_search: "Aramayı temizle",
+    filter_projects: "Filtre",
+    filter_tags: "Etiketlere göre filtrele",
+    filter_hint: "Seçili etiketlerden herhangi biriyle eşleşir.",
+    clear_filters: "Filtreleri temizle",
+    no_projects: "Proje bulunamadı. Başka bir arama deneyin veya filtreleri temizleyin.",
+    project_results: "{total} projeden {count} sonuç",
+    project_view: "Proje görünümü",
+
 
     // Project details
     project_label: "PROJE",
